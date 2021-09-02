@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-
+import './assets/css/app.css'
+Vue.config.ignoredElements = [/^ion-/]
 Vue.config.productionTip = false
 
 new Vue({
