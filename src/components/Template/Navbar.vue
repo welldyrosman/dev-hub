@@ -9,11 +9,11 @@
                     <span class="nav_title">PARKLAND<br>DIGITAL<br>SYSTEM</span>
                 </div>
                 <div class="nav__list">
-                    <div href="#" v-for="menu in menus" v-on:click="togglecollapse(menu.id)" :key="menu.id" class="nav__link collapse" :class="isactive==menu.id?'active':''">
+                    <div href="#" v-for="menu in menus"  :key="menu.id" class="nav__link collapse" :class="isactive==menu.id?'active':''">
                         <ion-icon name="document-text-outline" class="nav__icon"></ion-icon>
                         <span class="nav_name">{{menu.label}}</span>
 
-                        <ion-icon name="chevron-down-outline" :class="isactive==menu.id?'rotate':''" class="collapse__link"></ion-icon>
+                        <ion-icon v-on:click="togglecollapse(menu.id)" :name="isactive==menu.id?'chevron-up-outline':'chevron-down-outline'" class="collapse__link"></ion-icon>
 
                         <div class="collapse__menu" :class="isactive==menu.id?'showCollapse':''">
                             <div v-for="submenu in menu.submenus" v-on:click="menuactive(submenu.id)" :key="submenu.id" 
@@ -74,7 +74,11 @@ export default {
            //console.log();
         },
         togglecollapse(id){
-            this.isactive=id
+            if(id==this.isactive){
+                this.isactive=null
+            }else{
+                this.isactive=id
+            }
         },
         menuactive(id){
             this.issubactv=id
