@@ -18,7 +18,7 @@
                         <div class="collapse__menu" :class="isactive==menu.id?'showCollapse':''">
                             <div v-for="submenu in menu.submenus" v-on:click="menuactive(submenu.id)" :key="submenu.id" 
                             :class="issubactv==submenu.id?'subactive':''" 
-                            class="collapse__sublink">{{submenu.label}}</div>
+                            class="collapse__sublink"><ion-icon name="document-text-outline" class="sub__icon"></ion-icon>{{submenu.label}}</div>
                         </div>
                     </div>   
                    

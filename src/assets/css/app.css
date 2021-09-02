@@ -152,12 +152,11 @@ header {
 
 .nav_title{
 	font-size: var(--title-font-size);
-    font-color:#000;
+    font-weight: bold;
 }
 
 .nav_name {
     font-size: var(--small-font-size);
-    font-color:#000;
     font-weight: bold;
     margin: 0 0 0 10px;
 }
@@ -219,7 +218,17 @@ header {
 .showCollapse {
     display: block;
 }
-
+.sub__icon{
+    font-size: 1.75rem;
+    display: grid;
+    align-items: right;
+    padding-right: .75rem;
+    float:right;
+    color: #000;
+    border-radius: .5rem;
+    transition: .3s;
+    cursor: pointer;
+}
 /* Rotate icon */
 .rotate {
     transform: rotate(180deg);
