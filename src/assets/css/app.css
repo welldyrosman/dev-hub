@@ -110,7 +110,11 @@ header {
     border-radius: 0.7rem;
     
 }
-
+.top_menu{
+    width: 100%;
+    margin: auto;
+    display: inline-block;
+}
 .nav__icon {
     display: grid;
     align-items: right;
